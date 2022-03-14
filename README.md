@@ -1,4 +1,4 @@
-# Game of Greed
+# Game of Greed  [Pull Request link](https://github.com/dialaabulkhail/game-of-greed/pull/2)
 Game of greed is a game where each player competes to be the first to reach 10,000 points.
 
 ## Group 2 team:
