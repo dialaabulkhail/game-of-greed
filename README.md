@@ -54,5 +54,3 @@ the output of the bank method is the amount of points added to total(balance) fr
  - Diala Abul-Khail  [Pull request]()
  - Abedalqader Alkhatib
  - Eman Al-Shaikh Hussain
-
-
