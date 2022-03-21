@@ -34,11 +34,12 @@ This lab is about tackling the highest risk and/or highest priority features - s
 
 
 ## API
-
+1. GameLogic class:
 - calculate_score() --> a class method that calculates score based on a tuple input of a dice roll.
 
 - roll_dice() --> a class method that returns a tuple with random values between 1 and 6 . The length of tuple matches the argument passed in the method.
 
+2. Banker class:
 - shelf() --> This method receives arguments of points (integer), to add to the shelf.
 shelf method temporarily store unbanked points.
 
@@ -46,6 +47,11 @@ shelf method temporarily store unbanked points.
 the output of the bank method is the amount of points added to total(balance) from shelf.
 
 - clear_shelf() --> This method removes all unbanked points.
+
+3. Game class:
+- Play() --> this method contains all functionalities needed to start the game according to the text files attached.
+
+- cheater() --> a static method used to print the cheating exception for the user with the dice roll again.
 
 
 ## Group 2 team:
