@@ -51,7 +51,7 @@ the output of the bank method is the amount of points added to total(balance) fr
 ## Group 2 team:
 
  - Mustafa Alhasanat
- - Diala Abul-Khail  [Pull request]()
+ - Diala Abul-Khail
  - Abedalqader Alkhatib
  - Eman Al-Shaikh Hussain
 
