@@ -5,7 +5,7 @@ from collections import Counter
 class GameLogic:
 
     @staticmethod
-    def calculate_score(rolls):
+    def get_scorers(rolls, custom=False):
         """
         This function takes a tuple represents the rolls
         of dices (0 ~ 6), and return the score based on
@@ -21,22 +21,22 @@ class GameLogic:
         if len(rolls) != 0:
             excluded = counts_list[0][0]
         else:
-            return score        # it is (0)
+            return score
 
         # go through every possible repeatetion and record the score for it
         if (counts_list[0][1] == 1) and (len(rolls) == 6):
-            return 1500
+            return 1500 if custom else "".join(str(i) for i in rolls) 
         elif (counts_list[0][1] == 2) and (len(counts_list) == 3) and (len(rolls) == 6):
             if counts_list[1][1] == 2:
-                return 1500
+                return 1500 if custom else "".join(str(i) for i in rolls) 
         elif (counts_list[0][1] == 3) and (len(counts_list) == 2) and (len(rolls) == 6):
             if counts_list[1][1] == 3:
-                return 1200
+                return 1200 if custom else "".join(str(i) for i in rolls)
         elif (counts_list[0][1] == 6) and (len(counts_list) == 1):
-            return 4000 if counts_list[0][0] == 1 else 400 * counts_list[0][0]       
+            return (4000 if counts_list[0][0] == 1 else 400 * counts_list[0][0]) if custom else "".join(str(i) for i in rolls)  
         else:
             if counts_list[0][1] == 5:
-                score = score + (3000 if counts_list[0][0] == 1 else 300 * counts_list[0][0])        
+                score = score + (3000 if counts_list[0][0] == 1 else 300 * counts_list[0][0])
             elif counts_list[0][1] == 4:
                 score = score + (2000 if counts_list[0][0] == 1 else 200 * counts_list[0][0])
             elif counts_list[0][1] == 3:
@@ -48,13 +48,13 @@ class GameLogic:
     
         # delete all the occurences of the defined (excluded) item and put the rest in a new list
         rolls = tuple([i for i in rolls if i != excluded])
-
         # if there are any items left in the list after deletions, re call the function with that list,
         #   then add the returned value to the curren score  
         if len(rolls) != 0:
-            score += GameLogic.calculate_score(rolls)
-        
-        return score
+            score += GameLogic.get_scorers(rolls, custom=True)
+                        
+        # return score
+        return score if custom else "".join(str(i) for i in rolls)
 
 
     @staticmethod
@@ -67,5 +67,10 @@ class GameLogic:
         return tuple([randint(1, 6) for _ in range(dices)])
 
 
+
 if __name__ == "__main__":
-    print(GameLogic.calculate_score((4,6)))
+    pass
+
+
+
+
