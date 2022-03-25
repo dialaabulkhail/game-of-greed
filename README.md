@@ -60,5 +60,3 @@ the output of the bank method is the amount of points added to total(balance) fr
  - Diala Abul-Khail --> [Pull request link - version3](https://github.com/dialaabulkhail/game-of-greed/pull/6)
  - Abedalqader Alkhatib
  - Eman Al-Shaikh Hussain
-
-
